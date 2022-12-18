@@ -29,13 +29,47 @@ int is_opcode(char ch){
 	}
 }
 
-int mypop(Stack *obj){
-	int data=obj->next->data;
-	Stack *cur=obj->next;
-	obj->next = cur->next;
-	free(cur);
-	return data;	
+int is_valid_token(char ch){
+	switch(ch){
+	case '+':
+	case '-':
+	case '*':
+	case '/':
+	case '^':
+	case '(':
+	case ')':
+	return 1;
+	}
+	if(ch>='0' && ch<='9')return 1;
+	return 0;
+
 }
+
+int is_valid_exp(char *st){
+	int brckt=0;
+	for(int i=0;st[i]!=0;i++){
+		// printf("%d: %d #",st[i],is_valid_token(st[i]));
+		if(!is_valid_token(st[i])){
+			return 0;
+		}
+		if(st[i]=='(')brckt++;
+		else if(st[i]==')')brckt--;
+
+
+		if (is_opcode(st[i]))
+		{
+			if(i==0 || st[i+1]==0){
+				return 0;
+			}
+			else if(st[i-1]=='(' || st[i+1] == ')') {
+				return 0;
+			}
+		}
+	}
+	if(brckt)return 0;
+	return 1;
+}
+
 NumsandExp infix_prefix(char *st){
 	NumsandExp obj=fetch_numbers_and_exp(st);
 	Stack *prefix = new_node(-33424);
