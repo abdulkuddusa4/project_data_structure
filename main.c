@@ -15,7 +15,7 @@ int main(int argc, char **argv){
 
 void parse_cmdl_args(int n,char **argv){
 	if(n==2 && !strncmp(argv[1],"--runapp",8)){
-		runapp(n,argc);
+		run_app(n,argc);
 	}
 	else if (n==3 && !strncmp(argv[1],"--evl",5)){
 		printf("%.3lf\n", eval(argv[2]));
