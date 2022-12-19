@@ -5,6 +5,7 @@
 #include"math.h"
 #include"string.h"
 #include"gtk/gtk.h"
+#include"ui/__app__.h"
 void parse_cmdl_args(int,char**);
 
 int main(int argc, char **argv){
@@ -14,7 +15,7 @@ int main(int argc, char **argv){
 
 void parse_cmdl_args(int n,char **argv){
 	if(n==2 && !strncmp(argv[1],"--runapp",8)){
-		printf("application is not available now :( sorry !\n");
+		runapp(n,argc);
 	}
 	else if (n==3 && !strncmp(argv[1],"--evl",5)){
 		printf("%.3lf\n", eval(argv[2]));
