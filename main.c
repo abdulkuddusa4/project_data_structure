@@ -18,6 +18,7 @@ void parse_cmdl_args(int n,char **argv){
 		run_app(n,argv);
 	}
 	else if (n==3 && !strncmp(argv[1],"--evl",5)){
+		if(!is_valid_exp(argv[2]){printf("INVALID EXPRESSION\n");return;}
 		printf("%.3lf\n", eval(argv[2]));
 	}
 	else printf("INVALID COMMAND\n");
