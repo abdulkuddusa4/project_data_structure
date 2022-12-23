@@ -25,8 +25,8 @@ int is_opcode(char ch){
 	case '/':
 	case '^':
 	return 1;
-	return 0;
 	}
+	return 0;
 }
 
 int is_valid_token(char ch){
@@ -48,7 +48,6 @@ int is_valid_token(char ch){
 int is_valid_exp(char *st){
 	int brckt=0;
 	for(int i=0;st[i]!=0;i++){
-		// printf("%d: %d #",st[i],is_valid_token(st[i]));
 		if(!is_valid_token(st[i])){
 			return 0;
 		}
