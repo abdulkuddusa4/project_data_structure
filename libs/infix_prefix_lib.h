@@ -74,27 +74,17 @@ NumsandExp infix_prefix(char *st){
 	Stack *prefix = new_node(-33424);
 	Stack *exp=obj.exp;
 	Stack *ops=new_node(-23434);
-	// print_stack(exp);
-	// print_stack(exp);
-	// printf("while loop: \n");
-	// while(!is_empty(exp))pop(exp);
-	// exit(0);
-	// printf("entering\n");
+
 	while(!is_empty(exp)){
 		char ch=pop(exp);
-		// printf("%c\n",ch);
 		if(ch == '$')
 			push(prefix,'$');
 		else if(ch==')')
 			push(ops,')');
 		else if(ch=='('){
-			// printf("<--\n");
 			int tmp = pop(ops);
 			while(tmp!=')' ){
-				// printf("('sdf')\n");
 				push(prefix,tmp);
-				// if(is_empty(ops))
-				// 	break;
 				tmp=pop(ops);
 			}
 		}
