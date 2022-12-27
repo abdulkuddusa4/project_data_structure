@@ -42,7 +42,6 @@ NumsandExp fetch_numbers_and_exp(char *st){
 		if(st[i]>='0'&&st[i]<='9'){
 			if(start<0){
 				start=i;
-				// printf("**->%d  %d\n", start,i);
 			}
 		}
 		else if(st[i]=='.')
@@ -72,16 +71,5 @@ double calc(char ch,double a,double b){
 	}
 }
 
-// double eval(char *st){
-// 	NumsandExp obj=infix_prefix(st);
-// 	// NumStack *await_numbers=num_stack_new(-2343);
-// 	// while(!is_empty(obj.exp)){
-// 	// 	char ch=pop(obj.exp);
-// 	// 	if(ch=='$')
-// 	// 		num_stack_push(await_numbers,num_stack_pop(obj.nums));
-// 	// 	else
-// 	// 		num_stack_push(await_numbers,calc(ch,pop(await_numbers),pop(await_numbers)));
-// 	// }
-// 	// return
-// }
+
 #endif

@@ -40,13 +40,14 @@ int is_valid_token(char ch){
 	case ')':
 	return 1;
 	}
-	if(ch>='0' && ch<='9')return 1;
+	if((ch>='0' && ch<='9') || ch=='.')return 1;
 	return 0;
 
 }
 
 int is_valid_exp(char *st){
 	int brckt=0;
+	// if(st[0] == '.') return 0;
 	for(int i=0;st[i]!=0;i++){
 		if(!is_valid_token(st[i])){
 			return 0;

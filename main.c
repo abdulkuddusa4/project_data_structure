@@ -1,6 +1,4 @@
 #include"stdio.h"
-// #include"libs/utils.h"
-// #include"libs/utils.h"
 #include"libs/infix_prefix_lib.h"
 #include"math.h"
 #include"string.h"
@@ -10,7 +8,6 @@ void parse_cmdl_args(int,char**);
 
 int main(int argc, char **argv){
 	parse_cmdl_args(argc, argv);
-//	printf("%.2lf",eval("12+13*(6+2)"));
 }
 
 void parse_cmdl_args(int n,char **argv){
