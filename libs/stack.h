@@ -22,7 +22,6 @@ Stack* new_node(int data){
 	obj->next=NULL;
 	return obj;
 }
-
 void __free_stack(Stack *obj){
 	Stack *cur=obj;
 	if(obj->next)

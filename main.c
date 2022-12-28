@@ -7,6 +7,7 @@
 void parse_cmdl_args(int,char**);
 
 int main(int argc, char **argv){
+
 	parse_cmdl_args(argc, argv);
 }
 
@@ -20,3 +21,43 @@ void parse_cmdl_args(int n,char **argv){
 	}
 	else printf("INVALID COMMAND\n");
 }
+
+
+
+
+
+
+
+
+
+
+
+
+/*
+
+28.89+7*6+234 
+
+$+$*$+$  28.0 7.0 6.0 
+
+$				$
++	+			$
+$				$$
+*	+*			$$
+$   +*			$$$
++   ++			$$$*
+$   ++			$$$*$
+				$$$*$++
+				++$*$$$   
+
+
+$				234.0
+$				234.0  6.0
+$				234.0  6.0  7.0 
+*				234.0  42
+$				234.0  42  28.0
++				234.0  70.0  
++				304
+
+
+
+*/

@@ -29,6 +29,8 @@ int is_opcode(char ch){
 	return 0;
 }
 
+
+//CHECKS FOR IF A CHARACTER IS VALID TOKEN(+-*/^()0-9.)
 int is_valid_token(char ch){
 	switch(ch){
 	case '+':
@@ -72,7 +74,7 @@ int is_valid_exp(char *st){
 
 NumsandExp infix_prefix(char *st){
 	NumsandExp obj=fetch_numbers_and_exp(st);
-	Stack *prefix = new_node(-33424);
+	Stack *prefix = new_node(54564564);
 	Stack *exp=obj.exp;
 	Stack *ops=new_node(-23434);
 

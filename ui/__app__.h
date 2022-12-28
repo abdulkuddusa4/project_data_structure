@@ -16,7 +16,7 @@ int run_app(int argc, char **argv){
 	// ALL THE CALLBACKS ARE CONNECTED HERE
 	g_signal_connect(window,"destroy",G_CALLBACK(close_app),NULL);
 	g_signal_connect(button,"clicked",G_CALLBACK(_evaluate),text_area);
-
+	//
 	gtk_container_add (GTK_CONTAINER (window), hbox);
 	gtk_container_set_border_width(GTK_CONTAINER(window),200);
 	gtk_entry_set_placeholder_text(GTK_ENTRY(text_area),"expr");

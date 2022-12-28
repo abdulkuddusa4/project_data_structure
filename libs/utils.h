@@ -13,9 +13,13 @@ typedef struct {
 void func(){
 	printf("%lf\n", pow(10,6));
 }
+// "(284.265+7)*(6+234)"
+
+//TAKES A STRING AND START FLOATING POINT AND END POINT OF A NUMBER FROM THAT 
+//STRING AND COVERT IT TO A DOUBLE POINT NUMBER.
 double convert_to_num(char *st,int s,int m,int e){
 	double number=0.0;
-	int p_up =(m>-1?m:e)-s-(m>-1)?1:0;
+	int p_up =(m>-1)?m-s-1:e-s;
 	int p_low = (m>-1)?m-e:0;
 	for(int p=p_up,i=s;p>=p_low;i++){
 		if(st[i]=='.')
